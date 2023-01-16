@@ -1,0 +1,14 @@
+main {
+  width: 100vw;
+  height: 753px;
+  background-color: aqua;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.popProducts {
+  width: 2100px;
+  height: 100%;
+  background-color: bisque;
+}

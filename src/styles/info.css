@@ -1,0 +1,57 @@
+.info {
+  width: 100vw;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #003585;
+  margin-bottom: 100px;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.innerInfo {
+  display: flex;
+  justify-content: space-between;
+  width: 1027px;
+}
+
+.leftSideInfo {
+  color: white;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.leftSideInfo h1 {
+  margin: 0;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.leftSideButtons {
+  display: flex;
+}
+
+#buttonOne {
+  color: #003585;
+  width: 130px;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+}
+
+#buttonTwo {
+  color: #a7f65c;
+  width: 130px;
+  height: 40px;
+  border-radius: 30px;
+  margin-left: 21px;
+  font-weight: 600;
+  border: 1px solid #a7f65c;
+  background-color: #003585;
+}
