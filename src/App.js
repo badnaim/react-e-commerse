@@ -1,9 +1,11 @@
 import "./styles/App.css";
-import Home from "./pages/Home";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Info from "./components/Info";
 import Main from "./components/Main";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -11,7 +13,10 @@ function App() {
       <Header />
       <Info />
       <Main />
-      <Home />
+      <Routes>
+        <Route path="login" element={<Login />} />
+      </Routes>
+      {/* <Home /> */}
       {/* <Footer /> */}
     </div>
   );

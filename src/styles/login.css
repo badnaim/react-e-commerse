@@ -1,0 +1,55 @@
+.fullScreen {
+  width: 100vw;
+  height: 100vh;
+  background-color: #003585;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* form {
+  width: 480px;
+  height: auto; 
+  display: inline-block;
+} */
+
+.container {
+  width: 510px;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.container input {
+  height: 40px;
+  width: 355px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#sameImg {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 12px;
+}
+
+#oddImg {
+  position: absolute;
+  margin-top: 10px;
+  right: 400px;
+}
+
+.firstLineOfBox {
+  display: flex;
+  width: 420px;
+  height: 50px;
+  justify-content: space-between;
+  margin-top: 36px;
+  margin-bottom: 32px;
+}
