@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { data } from "../util/data"
+import { data } from "../util/data";
 import "../styles/main.css";
 
 export default function Main() {
@@ -15,8 +15,16 @@ export default function Main() {
     <main>
       <div className="popProducts">
         <div className="lineOne">
-          <div><h1>Popular products</h1></div>
-          <div></div>
+          <div>
+            <h1>Popular products</h1>
+          </div>
+          <div id="filters">
+            <button>Cameras</button>
+            <button>Cameras</button>
+            <button>Cameras</button>
+            <button>Cameras</button>
+            <button>Cameras</button>
+          </div>
         </div>
         {/* <div>
           <img src={product.image} />

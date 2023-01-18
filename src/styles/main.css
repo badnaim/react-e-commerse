@@ -1,7 +1,7 @@
 main {
   width: 100vw;
   height: 753px;
-  background-color: aqua;
+  background-color: blueviolet;
   margin-bottom: 70px;
   display: flex;
   justify-content: center;
@@ -17,8 +17,27 @@ main {
   width: 100%;
   height: auto;
   background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.lineOne h1{
+.lineOne h1 {
   color: #003585;
+}
+
+#filters {
+  display: flex;
+  gap: 13px;
+  margin-right: 70px;
+}
+
+#filters button {
+  width: 139px;
+  height: 45px;
+  border-radius: 25px;
+  border: none;
+  color: #003585;
+  background-color: white;
+  font-weight: 600;
 }

@@ -11,18 +11,21 @@ export default function Login(prop) {
     navigate("Home");
   };
 
-  const { LoginCheck } = prop;
+  const { setLogin } = prop;
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
-  function loginHandler(e) {
-    e.preventDefault();
-    setUserName(e.target.userName.value);
-    setPassword(e.target.password.value);
-  }
+  // const { LoginCheck } = prop;
+  // const [userName, setUserName] = useState("");
+  // const [password, setPassword] = useState("");
 
-  console.log("password:", password);
-  console.log("userName:", userName);
+  // function loginHandler(e) {
+  //   e.preventDefault();
+  //   setUserName(e.target.userName.value);
+  //   setPassword(e.target.password.value);
+  // }
+  // console.log("password:", password);
+  // console.log("userName:", userName);
 
   return (
     <div className="fullScreen">
@@ -37,6 +40,7 @@ export default function Login(prop) {
           <div id="input">
             <img id="sameImg" src="user.png" />
             <input
+              onChange={(e) => setUserName(e.target.value)}
               name="userName"
               id="eMail"
               type="text"
@@ -46,6 +50,7 @@ export default function Login(prop) {
           <div id="input">
             <img id="sameImg" src="unlock.png" />
             <input
+              onChange={(e) => setPassword(e.target.value)}
               name="password"
               id="password"
               type="text"
@@ -54,7 +59,11 @@ export default function Login(prop) {
             <a>
               <p id="forgottenPass">Нууц үгээ мартсан уу?</p>
             </a>
-            <button type="submit" id="blueButton">
+            <button
+              type="submit"
+              id="blueButton"
+              onClick={() => setLogin(password, userName)}
+            >
               Нэвтрэх
             </button>
           </div>
