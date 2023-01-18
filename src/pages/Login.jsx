@@ -18,7 +18,7 @@ export default function Login(prop) {
   function loginHandler(e) {
     e.preventDefault();
     setUserName(e.target.userName.value);
-    setPassword(e.target.userName.value);
+    setPassword(e.target.password.value);
   }
 
   console.log("password:", password);

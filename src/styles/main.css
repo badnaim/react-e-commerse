@@ -12,3 +12,13 @@ main {
   height: 100%;
   background-color: bisque;
 }
+
+.lineOne {
+  width: 100%;
+  height: auto;
+  background-color: aqua;
+}
+
+.lineOne h1{
+  color: #003585;
+}
