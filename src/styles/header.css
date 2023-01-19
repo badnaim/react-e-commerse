@@ -62,3 +62,7 @@ header {
   align-items: center;
   gap: 40px;
 }
+
+.onClickLogo:hover {
+  cursor: pointer;
+}

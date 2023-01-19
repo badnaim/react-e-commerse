@@ -1,0 +1,117 @@
+.cardInfo {
+  width: 1318px;
+  height: 783px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+.fullInfo {
+  display: flex;
+  justify-content: center;
+}
+
+.info1 {
+  border: 1px solid #C8C8C8;
+  width: 642px;
+  height: 783px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info1 img{
+  width: 540px;
+  height: 387px;
+}
+
+.info2 {
+  width: 650px;
+  height: 783px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#infoOne {
+  border: 1px solid #C8C8C8;
+  display: flex;
+  align-items: center;
+  width: 650px;
+  height: 369px;
+  /* background-color:blue; */
+  border-radius: 20px;
+  padding-left: 20px;
+}
+
+.info1:hover {
+  cursor: pointer;
+}
+
+#infoOne:hover {
+  cursor: pointer;
+}
+
+#infoTwo:hover {
+  cursor: pointer;
+}
+
+#infoOne img {
+  width: 50%;
+  height: 70%;
+  border-radius: 20px;
+}
+
+#infoTwo {
+  border: 1px solid #C8C8C8;
+  display: flex;
+  align-items: center;
+  width: 650px;
+  height: 369px;
+  /* background-color:blue; */
+  border-radius: 20px;
+  padding-left: 20px;
+}
+
+#infoTwo img {
+  width: 50%;
+  height: 70%;
+  border-radius: 20px;
+}
+
+.cardInfo p {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #00314D;
+
+}
+
+.cardInfo #price {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #4A4A4A;
+
+}
+
+.oddOne {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 600px;
+  margin-bottom: 0;
+}
+
+.sameOne {
+  height: 80%;
+  width: 40%;
+  margin-left: 30px;
+}

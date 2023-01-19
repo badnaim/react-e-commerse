@@ -16,21 +16,48 @@
 }
 
 .prodContent {
-  width: 280px;
+  width: 250px;
   height: 80px;
-  background-color: aqua;
   display: flex;
-  
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .prodName {
   margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  color: #000000;
+  margin-bottom: 3px;
 }
 
 .prodCategory {
   margin: 0;
+  margin-bottom: 3px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #003585;
+
 }
 
 .prodPrice {
+  color: #4A4A4A;
+  font-weight: 600;
+  font-size: 17px;
+}
 
+.prodInto {
+  cursor: pointer;
+  margin-top: 30px;
 }

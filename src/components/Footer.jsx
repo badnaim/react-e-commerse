@@ -8,7 +8,7 @@ import "../styles/footer.css";
 export default function Footer() {
   return <footer>
     <div className="footerOne">
-      <Img1 />
+      <a href="#top"><Img1 /></a>
     </div>
     <div className="footerTwo">
       <div id="fOne">

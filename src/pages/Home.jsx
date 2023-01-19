@@ -37,17 +37,14 @@ export default function Home() {
         <Route
           element={
             IsLoggedIn ? (
-              <Dashboard path="/" setLogout={logoutHandler} />
+              <Dashboard path="/dashboard" setLogout={logoutHandler} />
             ) : (
               <Login path="/" setLogin={loginHandler} />
             )
           }
         />
       </Routes>
-      {/* <Route path="/profile" element={<Profile />} />
-      <Route path="/product:id" element={<ProductCard />} />
-      <Route path="/search/:product" element={<Search />} /> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

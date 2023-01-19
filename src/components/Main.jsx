@@ -1,7 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { data } from "../util/data";
 import Product from "./subcomp/Product";
+import Info1 from "./Info1"
 import "../styles/main.css";
 
 export default function Main() {
@@ -28,12 +29,14 @@ export default function Main() {
           ))}
         </div>
         
-        
         <div className="imgWithButton">
           <img src="Group3.png" />
           <button id="buttonOneF">New laptop</button>
           <button id="buttonTwoF">Shop now</button>
         </div>
+
+        <Info1 />
+
         <div className="logos">
           <div><img src="brand-4.png" /></div>
           <div><img src="brand-5.png" /></div>
