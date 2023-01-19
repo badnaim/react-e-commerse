@@ -2,14 +2,14 @@ main {
   width: 100vw;
   height: 753px;
   background-color: blueviolet;
-  margin-bottom: 70px;
+  margin-bottom: 300px;
   display: flex;
   justify-content: center;
 }
 
 .popProducts {
   width: 2100px;
-  height: 100%;
+  height: 1600px;
   background-color: bisque;
 }
 
@@ -40,4 +40,49 @@ main {
   color: #003585;
   background-color: white;
   font-weight: 600;
+}
+
+#buttonOneF {
+  background-color: white;
+  position: absolute;
+  right: 362px;
+  margin-top: 90px;
+  color: #003585;
+  width: 134px;
+  height: 45px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+}
+
+#buttonTwoF {
+  position: absolute;
+  margin-top: 309px;
+  right: 362px;
+  color: white;
+  width: 134px;
+  height: 45px;
+  border-radius: 20px;
+  margin-left: 21px;
+  font-weight: 600;
+  border: 2px solid #a7f65c;
+  background-color: rgb(34, 34, 34);
+}
+
+.imgWithButton {
+  margin-top: 100px;
+}
+
+.logos {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.products {
+  margin-top: 30px;
+  display: flex;
+  gap: 27px;
+  flex-wrap: wrap;
+  justify-content: center;
 }

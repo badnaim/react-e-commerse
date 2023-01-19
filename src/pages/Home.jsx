@@ -13,10 +13,8 @@ export default function Home() {
   const [userData, setUserData] = useState(users);
 
   function loginHandler(userName, password) {
-    console.log("loign handler is running");
     userData.map((user) => {
-      console.log(user.userName);
-      if (user.userName == userName && user.password == password) {
+      if (user.userName === userName && user.password === password) {
         setIsLoggedIn(true);
       } else {
         console.error("error");
@@ -32,22 +30,24 @@ export default function Home() {
     <div>
       <Header />
       <Info />
-      <Main />
+      {/* <Main /> */}
       <Routes>
-        <Route path="login" element={<Login />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/login" element={<Login />} />
         <Route
-          path="login"
           element={
             IsLoggedIn ? (
-              <Dashboard setLogout={logoutHandler} />
+              <Dashboard path="/" setLogout={logoutHandler} />
             ) : (
-              <Login setLogin={loginHandler} />
+              <Login path="/" setLogin={loginHandler} />
             )
           }
         />
       </Routes>
-
-      <Footer />
+      {/* <Route path="/profile" element={<Profile />} />
+      <Route path="/product:id" element={<ProductCard />} />
+      <Route path="/search/:product" element={<Search />} /> */}
+      {/* <Footer /> */}
     </div>
   );
 }

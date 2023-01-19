@@ -15,10 +15,6 @@ export default function Login(prop) {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
-  // const { LoginCheck } = prop;
-  // const [userName, setUserName] = useState("");
-  // const [password, setPassword] = useState("");
-
   // function loginHandler(e) {
   //   e.preventDefault();
   //   setUserName(e.target.userName.value);
@@ -62,7 +58,7 @@ export default function Login(prop) {
             <button
               type="submit"
               id="blueButton"
-              onClick={() => setLogin(password, userName)}
+              onClick={() => setLogin(userName, password)}
             >
               Нэвтрэх
             </button>

@@ -3,4 +3,40 @@ footer {
   height: 400px;
   background-color: #003585;
   margin-top: 50px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.footerOne {
+  margin-top: 69px;
+  display: flex;
+  right: 0;
+  width: 1300px;
+  height: 60px;
+}
+
+.footerTwo {
+  margin-top: 150px;
+  width: 1300px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#fOne {
+  display: flex;
+  gap: 37px;
+}
+
+#fTwo {
+  text-align: left;
+  width: 401px;
+  height: 32px;
+  color: white; 
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 500;
 }
