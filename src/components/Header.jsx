@@ -2,13 +2,15 @@ import "../styles/header.css";
 import Img1 from "../images/Img1";
 import Img2 from "../images/Img2";
 import Img3 from "../images/Img3";
+import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 
-export default function Header() {
+export default function Header(props) {
   const navigate = useNavigate();
-  const urlChangeHandler = () => {
-    navigate("login");
-  };
+  const [val, setVal] = useState("");
+  function search() {
+    navigate(`/search/${val}`);
+  }
   return (
     <header>
       <div className="navSec">
@@ -16,10 +18,32 @@ export default function Header() {
           navigate("/")
         }}><Img1 /></a>
         <div className="searchSec">
-          <input placeholder="Search any things" />
-          <button>Search</button>
+          <input type="text" placeholder="Search any things" onChange={(e) => setVal(e.target.value)} />
+          <button onClick={search}>Search</button>
         </div>
-        <div className="twoButton">
+
+        {props.sign ? (
+          <div className="twoButton">
+          <div className="signIn">
+            <a href="">Profile</a>
+            <a href="/">Log out</a>
+          </div>
+            <a href="">
+            <Img2 />
+            </a>
+          </div>
+        ) : (
+          <div className="twoButton">
+          <div className="signIn">
+            <a href="login">Sign In</a>
+          </div>
+            <a href="">
+            <Img3 />
+            </a>
+          </div>
+        )}
+
+        {/* <div className="twoButton">
           <div className="signIn">
             <Img2 />
             <button onClick={urlChangeHandler}>Sign in</button>
@@ -27,7 +51,7 @@ export default function Header() {
           <div>
             <Img3 />
           </div>
-        </div>
+        </div> */}
       </div>
     </header>
   );

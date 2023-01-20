@@ -6,44 +6,29 @@ import { useState } from "react";
 import { users } from "../util/data"
 import "../styles/login.css";
 
-export default function Login(prop) {
+export default function Login(props) {
+  const { check } = props;
   const navigate = useNavigate();
-  const urlChangeHandler = () => {
-    navigate("Home");
-  };
 
-  const { setLogin } = prop;
-  const [userName, setUserName] = useState("");
-  const [password, setPassword] = useState("");
-  // const [IsLoggedIn, setIsLoggedIn] = useState(false);
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log("username:", userName)
-  //   console.log("password:", password)
-  //   console.log(users);
-  //   users.map((user) => {
-  //     if (user.userName === userName && user.password === password) {
-  //       setIsLoggedIn(true);
-  //       console.log("zow bn")
-  //     } else {
-  //       console.error("error");
-  //     }
-  // })
+  function loginHandler(e) {
+    e.preventDefault();
+    check(e.target.userName.value, e.target.password.value)
+  }
 
   return (
     <div className="fullScreen">
       <div className="container">
         <div className="firstLineOfBox">
           <Img5 />
-          <a onClick={urlChangeHandler}>
+          <a onClick={() => {navigate("/")}}>
             <Img4 />
           </a>
         </div>
-        <form>
+        <form onSubmit={loginHandler}>
           <div id="input">
             <img id="sameImg" src="user.png" />
             <input
-              onChange={(e) => setUserName(e.target.value)}
+              // onChange={(e) => setUserName(e.target.value)}
               name="userName"
               id="eMail"
               type="text"
@@ -53,7 +38,7 @@ export default function Login(prop) {
           <div id="input">
             <img id="sameImg" src="unlock.png" />
             <input
-              onChange={(e) => setPassword(e.target.value)}
+              // onChange={(e) => setPassword(e.target.value)}
               name="password"
               id="password"
               type="text"
@@ -65,7 +50,7 @@ export default function Login(prop) {
             <button
               type="submit"
               id="blueButton"
-              onClick={() => setLogin(userName, password)}
+              // onClick={() => setLogin(userName, password)}
             >
               Нэвтрэх
             </button>
