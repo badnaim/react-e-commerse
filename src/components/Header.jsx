@@ -2,7 +2,7 @@ import "../styles/header.css";
 import Img1 from "../images/Img1";
 import Img2 from "../images/Img2";
 import Img3 from "../images/Img3";
-import { useState } from "react"
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Header(props) {
@@ -11,34 +11,46 @@ export default function Header(props) {
   function search() {
     navigate(`/search/${val}`);
   }
+
+  // console.log(props.userName);
+
   return (
     <header>
       <div className="navSec">
-        <a className="onClickLogo" onClick={() => {
-          navigate("/")
-        }}><Img1 /></a>
+        <a
+          className="onClickLogo"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          <Img1 />
+        </a>
         <div className="searchSec">
-          <input type="text" placeholder="Search any things" onChange={(e) => setVal(e.target.value)} />
+          <input
+            type="text"
+            placeholder="Search any things"
+            onChange={(e) => setVal(e.target.value)}
+          />
           <button onClick={search}>Search</button>
         </div>
 
         {props.sign ? (
           <div className="twoButton">
-          <div className="signIn">
-            <a href="">Profile</a>
-            <a href="/">Log out</a>
-          </div>
+            <div className="signIn">
+              <a href="">{props.userName}</a>
+              <a href="/">Log out</a>
+            </div>
             <a href="">
-            <Img2 />
+              <Img2 />
             </a>
           </div>
         ) : (
           <div className="twoButton">
-          <div className="signIn">
-            <a href="login">Sign In</a>
-          </div>
+            <div className="signIn">
+              <a href="login">Sign In</a>
+            </div>
             <a href="">
-            <Img3 />
+              <Img3 />
             </a>
           </div>
         )}

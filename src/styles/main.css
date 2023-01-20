@@ -1,7 +1,6 @@
 main {
   width: 100vw;
   height: 2380px;
-  /* background-color: blueviolet; */
   display: flex;
   justify-content: center;
 }
@@ -85,9 +84,11 @@ main {
 }
 
 .products {
+  width: 1500px;
+  /* height: 700px; */
   margin-top: 30px;
   display: flex;
   gap: 27px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }

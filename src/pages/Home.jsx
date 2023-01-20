@@ -9,39 +9,42 @@ import Dashboard from "./Dashboard";
 import { users } from "../util/data";
 
 export default function Home() {
-const [data, setData] = useState(users);
-const [sign, setSign] = useState(false);
-const navigate = useNavigate();
+  const [data, setData] = useState(users);
+  const [sign, setSign] = useState(false);
+  const [userName, setUserName] = useState("");
+  const navigate = useNavigate();
 
-function check(userName, password) {
-  data.map((user) => {
-    if(user.userName === userName && user.password === password) {
-      navigate("/profile")
-      setSign(true)
-    } else {
-      console.log("error")
-    }
-  })
-}
+  function check(userName, password) {
+    // console.log("password:", password);
+    // console.log("userName:", userName);
+    data.map((user) => {
+      if (user.userName === userName && user.password === password) {
+        navigate("/");
+        setSign(true);
+      } else {
+        console.log("error");
+      }
+    });
+  }
 
   return (
     <div>
-      <Header sign={sign}/>
+      <Header sign={sign} userName={userName} />
       <Info />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/login" element={<Login users={data} setData={setData} check={check} />} />
-        {/* /* <Route path="/login" element={<Login />} /> */
-        /* <Route
+        <Route
+          path="/login"
           element={
-            IsLoggedIn ? (
-              <Dashboard path="/dashboard" setLogout={logoutHandler} />
-            ) : (
-              <Login path="/login" setLogin={loginHandler} />
-            )
+            <Login
+              users={data}
+              setData={setData}
+              check={check}
+              userName={userName}
+              setUserName={setUserName}
+            />
           }
-        /> */}
-        
+        />
       </Routes>
       <Footer />
     </div>
