@@ -3,7 +3,6 @@ import Img5 from "../images/Img5";
 import Img4 from "../images/Img4";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { users } from "../util/data";
 import "../styles/login.css";
 
 export default function Login(props) {
@@ -48,11 +47,12 @@ export default function Login(props) {
               onChange={(e) => setPassword(e.target.value)}
               name="password"
               id="password"
-              size ="20" 
-              maxlength ="20"
+              size="20"
+              maxlength="20"
               type="password"
               placeholder="Нууц үг"
-              required/>
+              required
+            />
             <a>
               <p id="forgottenPass">Нууц үгээ мартсан уу?</p>
             </a>

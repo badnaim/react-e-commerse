@@ -10,10 +10,11 @@
 .fullInfo {
   display: flex;
   justify-content: center;
+  /* margin-bottom: 300px; */
 }
 
 .info1 {
-  border: 1px solid #C8C8C8;
+  border: 1px solid #c8c8c8;
   width: 642px;
   height: 783px;
   border-radius: 20px;
@@ -23,7 +24,7 @@
   align-items: center;
 }
 
-.info1 img{
+.info1 img {
   width: 540px;
   height: 387px;
 }
@@ -37,7 +38,7 @@
 }
 
 #infoOne {
-  border: 1px solid #C8C8C8;
+  border: 1px solid #c8c8c8;
   display: flex;
   align-items: center;
   width: 650px;
@@ -66,7 +67,7 @@
 }
 
 #infoTwo {
-  border: 1px solid #C8C8C8;
+  border: 1px solid #c8c8c8;
   display: flex;
   align-items: center;
   width: 650px;
@@ -88,8 +89,7 @@
   line-height: 20px;
   letter-spacing: 0em;
   text-align: left;
-  color: #00314D;
-
+  color: #00314d;
 }
 
 .cardInfo #price {
@@ -98,8 +98,7 @@
   line-height: 26px;
   letter-spacing: 0em;
   text-align: left;
-  color: #4A4A4A;
-
+  color: #4a4a4a;
 }
 
 .oddOne {
