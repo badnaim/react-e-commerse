@@ -172,7 +172,7 @@ export const data = [
     name: "LED bulbs",
     id: "8bf7f5fc-92f3-11ed-a1eb-0242ac120002",
     image:
-      "​​https://cdn.vox-cdn.com/thumbor/twhweqrG_obtz7SoYGWKld_qgMM=/0x0:5250x3600/1400x1400/filters:focal(2625x1800:2626x1801)/cdn.vox-cdn.com/uploads/chorus_asset/file/22823524/philips_smart_led_bulb_package.jpg",
+      "https://i5.walmartimages.com/asr/d01f7439-4c12-480e-ae89-bb6e6be10b2c.75998144f0f5ca7ef6af2330cd8d4cf3.jpeg",
     price: 80,
     stock: 4,
     sale: 2,
@@ -189,7 +189,8 @@ export const data = [
     ],
     name: "Philips Oven",
     id: "8bf7f8d6-92f3-11ed-a1eb-0242ac120002",
-    image: "​​https://m.media-amazon.com/images/I/618O0ywM1SL._SX522_.jpg",
+    image:
+      "https://cdn.staticans.com/image/tr:e-sharpen-01,h-1500,w-1500,cm-pad_resize/data/philips/otg_28072021.jpg",
     price: 7920,
     stock: 164,
     sale: 27,
@@ -207,7 +208,8 @@ export const data = [
     ],
     name: "Sketch Pad",
     id: "9afc4a40-92f7-11ed-a1eb-0242ac120002",
-    image: "​​https://m.media-amazon.com/images/I/61sC5JwNrpL._AC_SX679_.jpg",
+    image:
+      "https://www.popsci.com/uploads/2021/11/10/Wacom-Cintiq-16-Edit.jpg?auto=webp",
     price: 215.99,
     stock: 15,
     sale: 12,
@@ -242,7 +244,7 @@ export const data = [
     name: "Beats Solo3 Headphones",
     id: "4ab6599a",
     image:
-      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.apple.com%2Fshop%2Fproduct%2FMX432LL%2FA%2Fbeats-solo3-wireless-headphones-the-beats-icon-collection-matte-black&psig=AOvVaw2tl_AIH02av1Ou9DkxSqTX&ust=1673669056089000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCPzZ7Vw_wCFQAAAAAdAAAAABAE",
+      "https://i5.walmartimages.com/asr/ec5b6665-593a-4894-8907-c0af89abce67_1.2cd1bd9e4e4dd6ec00c6be427f1bdea1.jpeg",
     price: 200,
     stock: 60,
     sale: 10,

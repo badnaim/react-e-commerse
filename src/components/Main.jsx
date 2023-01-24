@@ -1,18 +1,18 @@
 import React from "react";
-import { data } from "../util/data";
-import Product from "./subcomp/Product";
+// import { data } from "../util/data";
+// import Product from "./subcomp/Product";
 import Info1 from "./Info1";
 import Products from "./subcomp/Products";
+// import { useState } from "react"
 import "../styles/main.css";
 
-export default function Main(props) {
+export default function Main() {
+  // const  [inf, setInf] =useState(data)
+
   return (
     <main>
       <div className="popProducts">
         <div className="lineOne">
-          <div>
-            <h1>Popular products</h1>
-          </div>
           <Products />
         </div>
 

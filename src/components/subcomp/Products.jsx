@@ -20,17 +20,24 @@ export default function Products() {
   return (
     <div>
       <div id="filters">
+        <div>
+          <h1>Popular products</h1>
+        </div>  
         <button onClick={filter}>All</button>
-        <button onClick={filter}>Tablets</button>
-        <button onClick={filter}>Appliances</button>
-        <button onClick={filter}>Gaming console</button>
-        <button onClick={filter}>Tablets</button>
+        <button onClick={filter}>tablets</button>
+        <button onClick={filter}>appliances</button>
+        <button onClick={filter}>gaming</button>
+        <button onClick={filter}>Apple</button>
+        <button onClick={filter}>headphones</button>
+        <button onClick={filter}>telescope</button>
       </div>
-      <div className="products">
-        {information.map((production) => (
-          <Product detail={production} key={data.index} />
-        ))}
-      </div>
+      {/* <div className="inPro"> */}
+        <div className="products">
+          {information.map((production) => (
+            <Product detail={production} key={production.index} />
+          ))}
+        </div>
+      {/* </div> */}
     </div>
   );
 }

@@ -1,14 +1,15 @@
 main {
   width: 100vw;
-  min-height: 3800px;
+  /* min-height: 3800px; */
+  height: auto;
   display: flex;
   justify-content: center;
   /* background-color: #a7f65c; */
 }
 
-.popProducts {
-  height: 2500px;
-}
+/* .popProducts {
+  height: auto;
+} */
 
 .lineOne {
   width: 100%;
@@ -59,14 +60,4 @@ main {
   margin-bottom: 150px;
   display: flex;
   justify-content: space-evenly;
-}
-
-.products {
-  width: 1500px;
-  height: 2000px;
-  margin-top: 30px;
-  display: flex;
-  gap: 27px;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
