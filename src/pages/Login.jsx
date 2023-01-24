@@ -48,9 +48,11 @@ export default function Login(props) {
               onChange={(e) => setPassword(e.target.value)}
               name="password"
               id="password"
-              type="text"
+              size ="20" 
+              maxlength ="20"
+              type="password"
               placeholder="Нууц үг"
-            />
+              required/>
             <a>
               <p id="forgottenPass">Нууц үгээ мартсан уу?</p>
             </a>

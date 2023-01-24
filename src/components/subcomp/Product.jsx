@@ -1,5 +1,5 @@
 import "../subcomp-style/product.css"
-import { DATA } from "../../util/data"
+// import { DATA } from "../../util/data"
 import React from 'react'
 
 export default function Products(props) {

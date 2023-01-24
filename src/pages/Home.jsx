@@ -45,6 +45,7 @@ export default function Home() {
             />
           }
         />
+        <Route path="" element/>
       </Routes>
       <Footer />
     </div>

@@ -7,10 +7,8 @@ import { useNavigate } from "react-router-dom";
 
 export default function Header(props) {
   const navigate = useNavigate();
-  const [val, setVal] = useState("");
-  function search() {
-    navigate(`/search/${val}`);
-  }
+  const [search, setSearch] = useState("");
+  console.log(search);
 
   // console.log(props.userName);
 
@@ -29,20 +27,23 @@ export default function Header(props) {
           <input
             type="text"
             placeholder="Search any things"
-            onChange={(e) => setVal(e.target.value)}
+            onChange={(e) => setSearch(e.target.value)}
           />
-          <button onClick={search}>Search</button>
+          <button>Search</button>
         </div>
 
         {props.sign ? (
           <div className="twoButton">
             <div className="signIn">
-              <a href="">{props.userName}</a>
-              <a href="/">Log out</a>
-            </div>
             <a href="">
-              <Img2 />
+              <div className="profile">
+                {props.userName}
+                <Img2 />
+              </div>
             </a>
+            <a href="/">Log out</a>  
+            </div>
+            
           </div>
         ) : (
           <div className="twoButton">

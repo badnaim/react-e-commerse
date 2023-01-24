@@ -71,3 +71,13 @@ header {
   text-decoration: none;
   color: white;
 }
+
+.signIn {
+  gap: 30px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}

@@ -15,7 +15,7 @@ export default function Main() {
             <h1>Popular products</h1>
           </div>
           <div id="filters">
-            <button>Cameras</button>
+            <button>All</button>
             <button>Cameras</button>
             <button>Cameras</button>
             <button>Cameras</button>
