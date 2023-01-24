@@ -3,6 +3,7 @@ main {
   /* min-height: 3800px; */
   height: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   /* background-color: #a7f65c; */
 }

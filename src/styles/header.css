@@ -81,3 +81,9 @@ header {
   align-items: center;
   gap: 7px;
 }
+
+.searchSec button:hover {
+  background-color: #142a4b;
+  color: white;
+  cursor: pointer;
+}
