@@ -2,10 +2,11 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "../styles/home.css";
 import Header from "../components/Header";
-import Info from "../components/Info";
+// import Info from "../components/Info";
 import Main from "../components/Main";
 import Login from "./Login";
 import Footer from "../components/Footer";
+import Dashboard from "./Dashboard";
 import { users } from "../util/data";
 
 export default function Home() {
@@ -30,7 +31,7 @@ export default function Home() {
   return (
     <div className="home">
       <Header sign={sign} userName={userName} />
-      <Info />
+      {/* <Info /> */}
       <Routes>
         <Route path="/" element={<Main />} />
         <Route
@@ -45,6 +46,7 @@ export default function Home() {
             />
           }
         />
+        <Route path="product/:id" element={<Dashboard />} />
       </Routes>
       <Footer />
     </div>

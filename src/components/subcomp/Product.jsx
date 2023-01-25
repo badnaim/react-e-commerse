@@ -1,9 +1,9 @@
 import "../subcomp-style/product.css";
 import { useNavigate } from "react-router-dom";
 
-export default function Product(prop) {
+export default function Product({ detail }) {
   const navigate = useNavigate();
-  const { detail } = prop;
+  // const { detail } = prop;
   return (
     <div
       className="card"

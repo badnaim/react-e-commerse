@@ -2,6 +2,7 @@ import React from "react";
 // import { data } from "../util/data";
 // import Product from "./subcomp/Product";
 import Info1 from "./Info1";
+import Info from "../components/Info";
 import Products from "./subcomp/Products";
 // import { useState } from "react"
 import "../styles/main.css";
@@ -12,22 +13,10 @@ export default function Main() {
   return (
     <main>
       <div className="popProducts">
+        <Info />
         <div className="lineOne">
           <Products />
         </div>
-
-        {/* <div className="products">
-          {data.map((content) => (
-            <Product
-              key={content.id}
-              image={content.image}
-              name={content.name}
-              category={content.category}
-              price={content.price}
-              sales={content.sale}
-            />
-          ))}
-        </div> */}
 
         <div className="imgWithButton">
           <img src="Group3.png" />
