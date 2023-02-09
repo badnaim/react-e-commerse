@@ -22,7 +22,7 @@ export default function Products() {
       <div id="filters">
         <div>
           <h1>Popular products</h1>
-        </div>  
+        </div>
         <button onClick={filter}>All</button>
         <button onClick={filter}>tablets</button>
         <button onClick={filter}>appliances</button>
@@ -32,11 +32,11 @@ export default function Products() {
         <button onClick={filter}>telescope</button>
       </div>
       {/* <div className="inPro"> */}
-        <div className="products">
-          {information.map((production) => (
-            <Product detail={production} key={production.index} />
-          ))}
-        </div>
+      <div className="products" >
+        {information.map((production) => (
+          <Product detail={production} key={production.index} />
+        ))}
+      </div>
       {/* </div> */}
     </div>
   );

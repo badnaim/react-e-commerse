@@ -3,17 +3,20 @@ import Info from "./Info"
 // import { data } from "../util/data";
 // import Product from "./subcomp/Product";
 import Info1 from "./Info1";
+// import Info from "../components/Info";
 import Products from "./subcomp/Products";
 // import { useState } from "react"
 import "../styles/main.css";
 
 export default function Main() {
   // const  [inf, setInf] =useState(data)
+  // const { search } = props;
 
   return (
     <main>
-      <Info />
+      {/* <Info /> */}
       <div className="popProducts">
+        <Info />
         <div className="lineOne">
           <Products />
         </div>

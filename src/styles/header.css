@@ -32,6 +32,15 @@ header {
   border: 1px solid white;
 }
 
+.searchSec button:active {
+  transform: translateY(1px);
+}
+
+.searchSec button:hover {
+  background-color: #0451c5;
+  cursor: pointer;
+}
+
 .searchSec input {
   width: 100%;
   height: 36px;
