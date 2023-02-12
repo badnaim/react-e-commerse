@@ -1,14 +1,15 @@
 import "../subcomp-style/product.css";
 import { useNavigate } from "react-router-dom";
 
-export default function Product({ detail, key }) {
+export default function Product({ detail }) {
   const navigate = useNavigate();
   // const { detail } = prop;
   return (
-    <div key={key}
+    <div
       className="card"
       onClick={() => {
         navigate(`../product/${detail.id}`);
+        // navigate(`../product/onProduct`);
       }}
     >
       <img src={detail.image} alt="product-image" className="prodImg"></img>

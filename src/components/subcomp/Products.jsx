@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import Product from "./Product";
-import { data } from "../../util/data";
+// import { data } from "../../util/data";
 import { useState } from "react";
+import { prodContext } from "../../layout/prodContext";
 import "../subcomp-style/products.css";
 
 export default function Products() {
+  const { data } = useContext(prodContext)
   const [information, setInformation] = useState(data);
+
+  useEffect(() => {
+    setInformation(data)
+  }, [data])
 
   function filter(e) {
     if (e.target.innerText === "All") {
@@ -17,6 +23,7 @@ export default function Products() {
       setInformation(prod);
     }
   }
+
   return (
     <div>
       <div id="filters">
@@ -33,8 +40,8 @@ export default function Products() {
       </div>
       {/* <div className="inPro"> */}
       <div className="products" >
-        {information.map((production) => (
-          <Product detail={production} key={production.index} />
+        {information.map((production, index) => (
+          <Product detail={production} key={index} />
         ))}
       </div>
       {/* </div> */}

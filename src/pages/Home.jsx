@@ -1,25 +1,36 @@
-import { Routes, Route, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import "../styles/home.css";
+import { useEffect, useState } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
+import "../styles/home.css";
 // import Info from "../components/Info";
-import Main from "../components/Main";
-import Login from "./Login";
+import axios from "axios";
 import Footer from "../components/Footer";
-import Dashboard from "./Dashboard";
+import Main from "../components/Main";
+import { prodContext } from "../layout/prodContext";
 import { users } from "../util/data";
+import Dashboard from "./Dashboard";
+import Login from "./Login";
 
 export default function Home() {
+  const [myUsers, setMyUsers] = useState(users);
+  const [data, setData] = useState([]);
 
-  const [data, setData] = useState(users);
   const [sign, setSign] = useState(false);
   const [userName, setUserName] = useState("");
   const navigate = useNavigate();
 
+  useEffect(() => {
+    axios.get("http://localhost:2020/products").then((res) => {
+      setData(res.data);
+      console.log("my data from home", res.data)
+    })
+  }, [])
+
   function check(userName, password) {
     // console.log("password:", password);
     // console.log("userName:", userName);
-    data.map((user) => {
+
+    myUsers.map((user) => {
       if (user.userName === userName && user.password === password) {
         navigate("/");
         setSign(true);
@@ -33,22 +44,24 @@ export default function Home() {
     <div className="home">
       <Header sign={sign} userName={userName} />
       {/* <Info /> */}
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route
-          path="/login"
-          element={
-            <Login
-              users={data}
-              setData={setData}
-              check={check}
-              userName={userName}
-              setUserName={setUserName}
-            />
-          }
-        />
-        <Route path="product/:id" element={<Dashboard />} />
-      </Routes>
+      <prodContext.Provider value={{ data, check, userName }}>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route
+            path="/login"
+            element={
+              <Login
+              // users={data}
+              // setUsers={setMyUsers}
+              // check={check}
+              // userName={userName}
+              // setUserName={setUserName}
+              />
+            }
+          />
+          <Route path="product/:id" element={<Dashboard />} />
+        </Routes>
+      </prodContext.Provider>
       <Footer />
     </div>
   );
