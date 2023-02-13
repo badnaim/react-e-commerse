@@ -1,25 +1,25 @@
-export const users = [
-  {
-    userName: "bat",
-    password: "12",
-    role: "user",
-  },
-  {
-    userName: "bold",
-    password: "123",
-    role: "user",
-  },
-  {
-    userName: "od",
-    password: "1234",
-    role: "admin",
-  },
-  {
-    userName: "mod",
-    password: "12345",
-    role: "admin",
-  },
-];
+// export const users = [
+//   {
+//     userName: "bat",
+//     password: "12",
+//     role: "user",
+//   },
+//   {
+//     userName: "bold",
+//     password: "123",
+//     role: "user",
+//   },
+//   {
+//     userName: "od",
+//     password: "1234",
+//     role: "admin",
+//   },
+//   {
+//     userName: "mod",
+//     password: "12345",
+//     role: "admin",
+//   },
+// ];
 
 // export const data = [
 //   {

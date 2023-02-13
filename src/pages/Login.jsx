@@ -1,27 +1,29 @@
-import React, { useContext } from "react";
+// import React, { useContext } from "react";
 import Img5 from "../images/Img5";
 import Img4 from "../images/Img4";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "../styles/login.css";
-import { prodContext } from "../layout/prodContext";
+// import { prodContext } from "../layout/prodContext";
 import axios from "axios";
 
 export default function Login(props) {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const { check } = props;
+  // const { check } = props;
   const navigate = useNavigate();
 
   function loginHandler(e) {
     e.preventDefault();
     // check(e.target.userName.value, e.target.password.value);
-    axios.post('http://localhost:2020/login', {
-      userName,
-      password,
-    }).then(res => {
-      alert(JSON.stringify(alert));
-    });
+    axios
+      .post("http://localhost:2020/login", {
+        userName,
+        password,
+      })
+      .then((res) => {
+        alert(JSON.stringify(alert));
+      });
   }
 
   return (
@@ -68,7 +70,7 @@ export default function Login(props) {
             <button
               type="submit"
               id="blueButton"
-            // onClick={() => setLogin(userName, password)}
+              // onClick={() => setLogin(userName, password)}
             >
               Нэвтрэх
             </button>
