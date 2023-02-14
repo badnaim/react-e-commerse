@@ -7,44 +7,48 @@ import axios from "axios";
 import Footer from "../components/Footer";
 import Main from "../components/Main";
 import { prodContext } from "../layout/prodContext";
+import { UsersContext } from "../layout/UsersContext";
 import { users } from "../util/data";
 import Dashboard from "./Dashboard";
 import Login from "./Login";
 
 export default function Home() {
-  const [myUsers, setMyUsers] = useState(users);
+  // const [myUsers, setMyUsers] = useState(users);
   const [data, setData] = useState([]);
-
+  const [users, setUsers] = useState([]);
   const [sign, setSign] = useState(false);
+
   const [userName, setUserName] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
     axios.get("http://localhost:2020/products").then((res) => {
       setData(res.data);
-      console.log("my data from home", res.data)
-    })
-  }, [])
-
-  function check(userName, password) {
-    // console.log("password:", password);
-    // console.log("userName:", userName);
-
-    myUsers.map((user) => {
-      if (user.userName === userName && user.password === password) {
-        navigate("/");
-        setSign(true);
-      } else {
-        console.log("error");
-      }
+      // console.log("my data from home", res.data)
     });
-  }
+  }, []);
+
+  // function check(userName, password) {
+  // console.log("password:", password);
+  // console.log("userName:", userName);
+
+  //   myUsers.map((user) => {
+  //     if (user.userName === userName && user.password === password) {
+  //       navigate("/");
+  //       setSign(true);
+  //     } else {
+  //       console.log("error");
+  //     }
+  //   });
+  // }
 
   return (
     <div className="home">
-      <Header sign={sign} userName={userName} />
+      <UsersContext.Provider value={{ users, setUsers, sign, setSign }}>
+        <Header sign={sign} userName={userName} />
+      </UsersContext.Provider>
       {/* <Info /> */}
-      <prodContext.Provider value={{ data, check, userName }}>
+      <prodContext.Provider value={{ data, userName }}>
         <Routes>
           <Route path="/" element={<Main />} />
           <Route

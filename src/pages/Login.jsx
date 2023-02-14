@@ -4,26 +4,44 @@ import Img4 from "../images/Img4";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "../styles/login.css";
+import { UsersContext } from "../layout/UsersContext";
+import { useContext } from "react";
 // import { prodContext } from "../layout/prodContext";
 import axios from "axios";
 
 export default function Login(props) {
+  const { users, setUsers } = useContext(UsersContext);
+  const { sign, setSign } = useContext(UsersContext);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   // const { check } = props;
   const navigate = useNavigate();
 
-  function loginHandler(e) {
-    e.preventDefault();
-    // check(e.target.userName.value, e.target.password.value);
-    axios
-      .post("http://localhost:2020/login", {
-        userName,
-        password,
-      })
-      .then((res) => {
-        alert(JSON.stringify(alert));
-      });
+  // function loginHandler(e) {
+  //   e.preventDefault();
+  //   // check(e.target.userName.value, e.target.password.value);
+  //   axios
+  //     .post("http://localhost:2020/login", {
+  //       userName,
+  //       password,
+  //     })
+  //     .then((res) => {
+  //       alert(JSON.stringify(alert));
+  //     });
+  // }
+
+  function check(userName, password) {
+    console.log("password:", password);
+    console.log("userName:", userName);
+
+    users.map((user) => {
+      if (user.userName === userName && user.password === password) {
+        navigate("/");
+        setSign(true);
+      } else {
+        console.log("error");
+      }
+    });
   }
 
   return (
