@@ -17,18 +17,15 @@ export default function Login(props) {
   // const { check } = props;
   const navigate = useNavigate();
 
-  // function loginHandler(e) {
-  //   e.preventDefault();
-  //   // check(e.target.userName.value, e.target.password.value);
-  //   axios
-  //     .post("http://localhost:2020/login", {
-  //       userName,
-  //       password,
-  //     })
-  //     .then((res) => {
-  //       alert(JSON.stringify(alert));
-  //     });
-  // }
+  function loginHandler(e) {
+    e.preventDefault();
+    const isValid = users.some(
+      (user) => user.userName === userName && user.password === password
+    );
+    if (isValid) {
+      setSign(true);
+    }
+  }
 
   function check(userName, password) {
     console.log("password:", password);

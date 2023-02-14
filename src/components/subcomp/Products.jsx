@@ -6,12 +6,12 @@ import { prodContext } from "../../layout/prodContext";
 import "../subcomp-style/products.css";
 
 export default function Products() {
-  const { data } = useContext(prodContext)
+  const { data } = useContext(prodContext);
   const [information, setInformation] = useState(data);
 
   useEffect(() => {
-    setInformation(data)
-  }, [data])
+    setInformation(data);
+  }, [data]);
 
   function filter(e) {
     if (e.target.innerText === "All") {
@@ -39,7 +39,7 @@ export default function Products() {
         <button onClick={filter}>telescope</button>
       </div>
       {/* <div className="inPro"> */}
-      <div className="products" >
+      <div className="products">
         {information.map((production, index) => (
           <Product detail={production} key={index} />
         ))}
