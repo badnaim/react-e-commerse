@@ -4,7 +4,7 @@ import Img2 from "../images/Img2";
 import Img3 from "../images/Img3";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import Button from "react-bootstrap/Button";
+import GetProdIntoBasket from "./subcomp/GetProdIntoBasket";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useContext } from "react";
 import { UsersContext } from "../layout/UsersContext";
@@ -15,6 +15,8 @@ export default function Header(props) {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const { users, setUsers } = useContext(UsersContext);
+  const { userName, setUserName } = useContext(UsersContext);
+  const { sign, setSign } = useContext(UsersContext);
 
   const [show, setShow] = useState(false);
 
@@ -31,7 +33,7 @@ export default function Header(props) {
 
   // console.log(search);
 
-  // console.log(props.userName);
+  // console.log(userName);
 
   return (
     <header>
@@ -53,15 +55,30 @@ export default function Header(props) {
           <button>Search</button>
         </div>
 
-        {props.sign ? (
+        {sign ? (
           <div className="twoButton">
             <div className="signIn">
               <a href="">
                 <div className="profile">
-                  {props.userName}
+                  {userName}
                   <Img2 />
                 </div>
               </a>
+              <a onClick={handleShow}>
+                <Img3 />
+              </a>
+              <Offcanvas
+                id="offCanvasOfHeader"
+                show={show}
+                onHide={handleClose}
+                placement={"end"}
+                name={"end"}
+              >
+                <Offcanvas.Header closeButton></Offcanvas.Header>
+                <Offcanvas.Body>
+                  <GetProdIntoBasket />
+                </Offcanvas.Body>
+              </Offcanvas>
               <a href="/">Log out</a>
             </div>
           </div>
@@ -69,36 +86,24 @@ export default function Header(props) {
           <div className="twoButton">
             <div className="signIn">
               <a href="login">Sign In</a>
+              <a onClick={handleShow}>
+                <Img3 />
+              </a>
+              <Offcanvas
+                id="offCanvasOfHeader"
+                show={show}
+                onHide={handleClose}
+                placement={"end"}
+                name={"end"}
+              >
+                <Offcanvas.Header closeButton></Offcanvas.Header>
+                <Offcanvas.Body>
+                  <GetProdIntoBasket />
+                </Offcanvas.Body>
+              </Offcanvas>
             </div>
-            <a onClick={handleShow}>
-              <Img3 />
-            </a>
-            <Offcanvas
-              show={show}
-              onHide={handleClose}
-              placement={"end"}
-              name={"end"}
-            >
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>
-                Some text as placeholder. In real life you can have the elements
-                you have chosen. Like, text, images, lists, etc.
-              </Offcanvas.Body>
-            </Offcanvas>
           </div>
         )}
-
-        {/* <div className="twoButton">
-          <div className="signIn">
-            <Img2 />
-            <button onClick={urlChangeHandler}>Sign in</button>
-          </div>
-          <div>
-            <Img3 />
-          </div>
-        </div> */}
       </div>
     </header>
   );

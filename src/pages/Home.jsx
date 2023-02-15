@@ -17,8 +17,8 @@ export default function Home() {
   const [data, setData] = useState([]);
   const [users, setUsers] = useState([]);
   const [sign, setSign] = useState(false);
-
   const [userName, setUserName] = useState("");
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -44,29 +44,32 @@ export default function Home() {
 
   return (
     <div className="home">
-      <UsersContext.Provider value={{ users, setUsers, sign, setSign }}>
-        <Header sign={sign} userName={userName} />
+      <UsersContext.Provider
+        value={{ users, setUsers, sign, setSign, userName, setUserName }}
+      >
+        <Header sign={sign} />
+
+        {/* <Info /> */}
+        <prodContext.Provider value={{ data }}>
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route
+              path="/login"
+              element={
+                <Login
+                // users={data}
+                // setUsers={setMyUsers}
+                // check={check}
+                // userName={userName}
+                // setUserName={setUserName}
+                />
+              }
+            />
+            <Route path="product/:id" element={<Dashboard />} />
+          </Routes>
+        </prodContext.Provider>
+        <Footer />
       </UsersContext.Provider>
-      {/* <Info /> */}
-      <prodContext.Provider value={{ data, userName }}>
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route
-            path="/login"
-            element={
-              <Login
-              // users={data}
-              // setUsers={setMyUsers}
-              // check={check}
-              // userName={userName}
-              // setUserName={setUserName}
-              />
-            }
-          />
-          <Route path="product/:id" element={<Dashboard />} />
-        </Routes>
-      </prodContext.Provider>
-      <Footer />
     </div>
   );
 }

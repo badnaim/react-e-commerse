@@ -1,5 +1,5 @@
 import React from "react";
-import Info from "./Info"
+import Info from "./Info";
 // import { data } from "../util/data";
 // import Product from "./subcomp/Product";
 import Info1 from "./Info1";
@@ -46,7 +46,6 @@ export default function Main() {
             <img src="brand-8.png" />
           </div>
         </div>
-
       </div>
     </main>
   );

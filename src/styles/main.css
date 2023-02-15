@@ -13,18 +13,19 @@ main {
 } */
 
 .lineOne {
-  width: 100%;
+  width: 100vw;
+  /* background-color: #a7f65c; */
   height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .lineOne h1 {
   margin-left: 50px;
   color: #003585;
 }
-
+.products-main {
+  width: 90%;
+  margin: 0 auto;
+}
 #buttonOneF {
   background-color: white;
   position: absolute;

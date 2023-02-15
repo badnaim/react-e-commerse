@@ -7,39 +7,47 @@ import "../styles/login.css";
 import { UsersContext } from "../layout/UsersContext";
 import { useContext } from "react";
 // import { prodContext } from "../layout/prodContext";
-import axios from "axios";
+// import axios from "axios";
 
 export default function Login(props) {
   const { users, setUsers } = useContext(UsersContext);
   const { sign, setSign } = useContext(UsersContext);
-  const [userName, setUserName] = useState("");
+  const { userName, setUserName } = useContext(UsersContext);
+  // const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   // const { check } = props;
   const navigate = useNavigate();
 
   function loginHandler(e) {
+    // console.log(e.target[0].value);
+    // console.log(e.target[1].value);
     e.preventDefault();
+    // console.log(users);
     const isValid = users.some(
       (user) => user.userName === userName && user.password === password
     );
+    console.log("isvalid", isValid);
     if (isValid) {
       setSign(true);
+      setUserName(userName);
+      navigate("/");
+      localStorage.setItem("user", { name: "bat", id: " as" });
     }
   }
+  // console.log(userName);
+  // function check(userName, password) {
+  //   console.log("password:", password);
+  //   console.log("userName:", userName);
 
-  function check(userName, password) {
-    console.log("password:", password);
-    console.log("userName:", userName);
-
-    users.map((user) => {
-      if (user.userName === userName && user.password === password) {
-        navigate("/");
-        setSign(true);
-      } else {
-        console.log("error");
-      }
-    });
-  }
+  //   users.map((user) => {
+  //     if (user.userName === userName && user.password === password) {
+  //       navigate("/");
+  //       setSign(true);
+  //     } else {
+  //       console.log("error");
+  //     }
+  //   });
+  // }
 
   return (
     <div className="fullScreen">

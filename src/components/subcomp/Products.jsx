@@ -25,7 +25,7 @@ export default function Products() {
   }
 
   return (
-    <div>
+    <div className="products-main">
       <div id="filters">
         <div>
           <h1>Popular products</h1>
