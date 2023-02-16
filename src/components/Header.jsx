@@ -10,6 +10,7 @@ import { useContext } from "react";
 import { UsersContext } from "../layout/UsersContext";
 import { useEffect } from "react";
 import axios from "axios";
+import { useBasketContext } from "../layout/basketContext";
 
 export default function Header(props) {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ export default function Header(props) {
   const { users, setUsers } = useContext(UsersContext);
   const { userName, setUserName } = useContext(UsersContext);
   const { sign, setSign } = useContext(UsersContext);
+  const { basketProd, setBasketProd } = useBasketContext();
 
   const [show, setShow] = useState(false);
 
@@ -34,6 +36,8 @@ export default function Header(props) {
   // console.log(search);
 
   // console.log(userName);
+
+  console.log(basketProd);
 
   return (
     <header>

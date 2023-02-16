@@ -17,12 +17,13 @@ export default function Login(props) {
   const [password, setPassword] = useState("");
   // const { check } = props;
   const navigate = useNavigate();
+  // console.log(users);
 
   function loginHandler(e) {
-    // console.log(e.target[0].value);
-    // console.log(e.target[1].value);
+    console.log(e.target[0].value);
+    console.log(e.target[1].value);
     e.preventDefault();
-    // console.log(users);
+
     const isValid = users.some(
       (user) => user.userName === userName && user.password === password
     );
@@ -93,7 +94,7 @@ export default function Login(props) {
             <button
               type="submit"
               id="blueButton"
-              // onClick={() => setLogin(userName, password)}
+            // onClick={() => setLogin(userName, password)}
             >
               Нэвтрэх
             </button>
