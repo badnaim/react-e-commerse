@@ -37,7 +37,7 @@ export default function Header(props) {
 
   // console.log(userName);
 
-  console.log(basketProd);
+  console.log("basketProd", basketProd);
 
   return (
     <header>

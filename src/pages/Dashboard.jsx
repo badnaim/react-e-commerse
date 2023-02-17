@@ -7,11 +7,13 @@ import { useContext } from "react";
 import { prodContext } from "../layout/prodContext";
 import { useState } from "react";
 import Img13 from "../images/Img13";
+import { useBasketContext } from "../layout/basketContext";
 
 export default function Dashboard() {
-  const [number, setNumber] = useState(0);
+  // const [number, setNumber] = useState(0);
   const [score, setScore] = useState(0);
   // const [products, setProducts] = useState(ProductsList);
+  const { basketProd, setBasketProd } = useBasketContext();
 
   function decrement() {
     if (score > 0) {
@@ -27,13 +29,16 @@ export default function Dashboard() {
 
   const { data } = useContext(prodContext);
   let { id } = useParams();
-  // console.log(id);
+  console.log("myid", id);
 
   // console.log("dashboard", data);
 
   const onProduct = data.filter((one) => {
     return one.id === id;
   });
+
+  console.log("basketProd", basketProd);
+
 
   return (
     <div className="allCardOfProduct">
@@ -60,7 +65,7 @@ export default function Dashboard() {
             </div>
           </div>
           <div>
-            <button>Add to card</button>
+            <button onClick={() => basketProd.push(id.toString())}>Add to card</button>
             <button>Buy it now</button>
           </div>
           <div className="myLineYo"></div>

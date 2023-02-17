@@ -4,11 +4,12 @@ import { useBasketContext } from "../../layout/basketContext";
 
 export default function Product({ detail }) {
   const navigate = useNavigate();
-  const { basketProd, setBasketProd } = useBasketContext();
-  const myBasketProd = () => basketProd.push(detail.id.toString());
+  // const { basketProd, setBasketProd } = useBasketContext();
   // console.log(myBasketProd);
   // console.log(detail.id);
   // const { detail } = prop;
+  // console.log(detail.id.toString());
+  // console.log("detail", detail);
   return (
     <div
       className="card"
@@ -27,9 +28,9 @@ export default function Product({ detail }) {
           {/* <div className="prodSales">{detail.sale}</div> */}
         </div>
         <div className="prodInto">
-          <a onClick={myBasketProd} id="addToBasket">
-            <img src="Frame36.png"></img>
-          </a>
+          {/* <a onClick={() => basketProd.push(detail.id.toString())} id="addToBasket"> */}
+          <img src="Frame36.png"></img>
+          {/* </a> */}
         </div>
       </div>
     </div>
